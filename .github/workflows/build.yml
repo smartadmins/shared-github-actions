@@ -1,0 +1,18 @@
+name: Java CI Using Shared Action
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Project Code
+        uses: actions/checkout@v4
+
+      - name: Use Shared Java Build Action
+        uses: smartadmins/shared-github-actions/java-build@v1
+        with:
+          java-version: '17'
