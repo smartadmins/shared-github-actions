@@ -13,6 +13,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Use Shared Java Build Action
-        uses: smartadmins/shared-github-actions/java-build@v1
+        uses: smartadmins/shared-github-actions/java-build@main
         with:
           java-version: '17'
