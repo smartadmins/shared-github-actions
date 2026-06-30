@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout Project Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Use Shared Java Build Action
         uses: smartadmins/shared-github-actions/java-build@main
