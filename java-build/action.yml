@@ -1,0 +1,21 @@
+name: Shared Java Build Action
+description: Setup Java and build Maven project
+
+inputs:
+  java-version:
+    description: Java version to use
+    required: true
+    default: '17'
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: ${{ inputs.java-version }}
+
+    - name: Run Maven Build
+      shell: bash
+      run: mvn clean install
